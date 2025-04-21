@@ -1,0 +1,77 @@
+@if (this.query == "userById") {
+    <div class="table-responsive mt-3">
+        <table class="table table-striped table-hover table-bordered shadow-sm rounded-3">
+            <thead class="table-dark">
+                <tr>
+                    <th scope="col">User ID</th>
+                    <th scope="col">User Name</th>
+                    <th scope="col">User Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (vm.users().length > 0) {
+                <tr>
+                    <td class="fw-bold">{{ vm.users()[0].id }}</td>
+                    <td>{{ vm.users()[0].name }}</td>
+                    <td>
+                        <span class="badge text-white"
+                            [ngClass]="vm.users()[0].subscriptionStatus=='active'?'bg-success':'bg-danger'">{{
+                            vm.users()[0].subscriptionStatus }}</span>
+                    </td>
+                </tr>
+                }
+                @else {
+                <tr>
+                    <td colspan="3" class="text-center text-muted py-3">
+                        <i class="bi bi-exclamation-circle"></i> No user found.
+                    </td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    }
+    @else if (this.query == "usersBySubStatus") {
+        <div class="table-responsive mt-3">
+            <button (click)="exportToExcel()" class="btn btn-success d-flex align-items-center gap-2 px-3 py-2 shadow-sm">
+                <i class="bi bi-file-earmark-excel-fill"></i> Export to Excel
+            </button>
+        <table id="users-table" class="table table-striped table-hover table-bordered shadow-sm rounded-3">
+            <thead class="table-dark">
+                <tr>
+                    <th scope="col">User ID</th>
+                    <th scope="col">User Name</th>
+                    <th scope="col">User Status</th>
+                    <th scope="col">User Token</th>
+                    <th scope="col">Platform</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (user of vm.users(); track user) {
+                <tr>
+                    <td class="fw-bold">{{ user.id }}</td>
+                    <td>{{ user.name }}</td>
+                    <td>
+                        <span class="badge text-white"
+                            [ngClass]="user.subscriptionStatus=='active'?'bg-success':'bg-danger'">{{
+                            user.subscriptionStatus }}</span>
+                    </td>
+                    <td class="text-truncate" style="max-width: 200px;">
+                        <span class="text-muted">{{ user.subscriptionToken }}</span>
+                    </td>
+                    <td>
+                        <i class="bi bi-device-laptop"></i> {{ vm.getPlatform(user.platform) }}
+                    </td>
+                </tr>
+                }
+                @empty {
+                <tr>
+                    <td colspan="5" class="text-center text-muted py-3">
+                        <i class="bi bi-exclamation-circle"></i> No user found.
+                    </td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    }

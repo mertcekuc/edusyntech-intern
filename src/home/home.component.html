@@ -1,0 +1,66 @@
+<nav class="navbar navbar-light bg-light shadow-sm p-3">
+  <div class="container-fluid d-flex flex-wrap align-items-center gap-3">
+    
+    <select [(ngModel)]="selectedQuery" name="query" id="query" class="form-select w-auto">
+      <option [ngValue]="null" disabled>Select Query</option>
+      <option [ngValue]="'userSubStatus'">Get User's Subscription Status</option>
+      <option [ngValue]="'usersBySubStatus'">Get Users by Subscription Status</option>
+      <option [ngValue]="'filterSubscriptions'"> Filter Subscriptions</option>
+    </select>
+
+    <div class="d-flex flex-wrap gap-2 align-items-center">
+      @if (selectedQuery === 'userSubStatus') {
+        <input type="text" [(ngModel)]="userId" name="userId" class="form-control w-auto" placeholder="Enter User ID" />
+      }
+      @else if (selectedQuery === 'usersBySubStatus') {
+        <select [(ngModel)]="selectedSubStatus" name="subStatus" id="subStatus" class="form-select w-auto">
+          <option [ngValue]="null" >Subscription Status</option>
+          <option value="active">Active</option>
+          <option value="inactive">Inactive</option>
+        </select>
+      }
+      @else if (selectedQuery==='filterSubscriptions') {
+        <select [(ngModel)]="sub_status" class="form-select w-auto">
+          <option [ngValue]="null" >Status</option>
+          <option value="active">Active</option>
+          <option value="expired">Expired</option>
+          <option value="canceled">Cancelled</option>
+          <option value="never_subscribed">Never Subscribed</option>
+        </select>
+
+        <select [(ngModel)]="sub_plan" class="form-select w-auto">
+          <option [ngValue]="null" >Plan</option>
+          <option value="monthly">Monthly</option>
+          <option value="3_monthly">3 Months</option>
+          <option value="6_monthly">6 Months</option>
+          <option value="yearly">Yearly</option>
+        </select>
+        
+        <select [(ngModel)]="sub_offer" class="form-select w-auto">
+          <option [ngValue]="null" disabled>Offer</option>
+          <option value="standard">Standard</option>
+          <option value="discounted">Discounted</option>
+          <option value="free_trial">Free Trial</option>
+        </select>
+
+        <input type="date" [(ngModel)]="sub_from" class="form-control w-auto" placeholder="From" />
+        <input type="date" [(ngModel)]="sub_to" class="form-control w-auto" placeholder="To" />
+        <label for="">Show only latest:</label><input type="checkbox" [(ngModel)]="show_latest" class="form-check-input" />
+      }
+    </div>
+
+    @if (selectedQuery === 'userSubStatus') {
+      <button (click)="getUser()" class="btn btn-primary">Get</button>
+    }
+    @else if (selectedQuery === 'usersBySubStatus') {
+      <button (click)="getUsersByStatus()" class="btn btn-primary">Get</button>
+    }
+    @else if (selectedQuery === 'filterSubscriptions') {
+      <button (click)="filterSubscriptions()" class="btn btn-primary">Filter</button>
+    }
+
+  </div>
+</nav>
+<hr class="m-0" />
+
+<router-outlet></router-outlet>

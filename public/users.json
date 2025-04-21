@@ -1,0 +1,162 @@
+[
+  {
+    "id": "1",
+    "name": "John Doe",
+    "email": "john.doe@example.com",
+    "subscriptionStatus": "active",
+    "subscriptionToken": "abc123",
+    "platform": 1
+  },
+  {
+    "id": "2",
+    "name": "Jane Smith",
+    "email": "jane.smith@example.com",
+    "subscriptionStatus": "inactive",
+    "subscriptionToken": "xyz789",
+    "platform": 2
+  },
+  {
+    "id": "3",
+    "name": "Alice Johnson",
+    "email": "alice.johnson@example.com",
+    "subscriptionStatus": "active",
+    "subscriptionToken": "lmn456",
+    "platform": 1
+  },
+  {
+    "id": "4",
+    "name": "Bob Brown",
+    "email": "bob.brown@example.com",
+    "subscriptionStatus": "inactive",
+    "subscriptionToken": "qrs987",
+    "platform": 2
+  },
+  {
+    "id": "5",
+    "name": "Charlie Davis",
+    "email": "charlie.davis@example.com",
+    "subscriptionStatus": "active",
+    "subscriptionToken": "def654",
+    "platform": 1
+  },
+  {
+    "id": "6",
+    "name": "Eva Green",
+    "email": "eva.green@example.com",
+    "subscriptionStatus": "active",
+    "subscriptionToken": "ghi321",
+    "platform": 2
+  },
+  {
+    "id": "7",
+    "name": "Frank White",
+    "email": "frank.white@example.com",
+    "subscriptionStatus": "inactive",
+    "subscriptionToken": "jkl654",
+    "platform": 1
+  },
+  {
+    "id": "8",
+    "name": "Grace Black",
+    "email": "grace.black@example.com",
+    "subscriptionStatus": "active",
+    "subscriptionToken": "mno987",
+    "platform": 2
+  },
+  {
+    "id": "9",
+    "name": "Henry Blue",
+    "email": "henry.blue@example.com",
+    "subscriptionStatus": "inactive",
+    "subscriptionToken": "pqr321",
+    "platform": 1
+  },
+  {
+    "id": "10",
+    "name": "Ivy Yellow",
+    "email": "ivy.yellow@example.com",
+    "subscriptionStatus": "active",
+    "subscriptionToken": "stu654",
+    "platform": 2
+  },
+  {
+    "id": "11",
+    "name": "Jack Red",
+    "email": "jack.red@example.com",
+    "subscriptionStatus": "inactive",
+    "subscriptionToken": "vwx987",
+    "platform": 1
+  },
+  {
+    "id": "12",
+    "name": "Karen Purple",
+    "email": "karen.purple@example.com",
+    "subscriptionStatus": "active",
+    "subscriptionToken": "yza321",
+    "platform": 2
+  },
+  {
+    "id": "13",
+    "name": "Leo Orange",
+    "email": "leo.orange@example.com",
+    "subscriptionStatus": "inactive",
+    "subscriptionToken": "bcd654",
+    "platform": 1
+  },
+  {
+    "id": "14",
+    "name": "Mia Pink",
+    "email": "mia.pink@example.com",
+    "subscriptionStatus": "active",
+    "subscriptionToken": "efg987",
+    "platform": 2
+  },
+  {
+    "id": "15",
+    "name": "Noah Grey",
+    "email": "noah.grey@example.com",
+    "subscriptionStatus": "inactive",
+    "subscriptionToken": "hij321",
+    "platform": 1
+  },
+  {
+    "id": "16",
+    "name": "Olivia Cyan",
+    "email": "olivia.cyan@example.com",
+    "subscriptionStatus": "active",
+    "subscriptionToken": "klm654",
+    "platform": 2
+  },
+  {
+    "id": "17",
+    "name": "Peter Magenta",
+    "email": "peter.magenta@example.com",
+    "subscriptionStatus": "inactive",
+    "subscriptionToken": "nop987",
+    "platform": 1
+  },
+  {
+    "id": "18",
+    "name": "Quinn Teal",
+    "email": "quinn.teal@example.com",
+    "subscriptionStatus": "active",
+    "subscriptionToken": "qrs321",
+    "platform": 2
+  },
+  {
+    "id": "19",
+    "name": "Rachel Amber",
+    "email": "rachel.amber@example.com",
+    "subscriptionStatus": "inactive",
+    "subscriptionToken": "tuv654",
+    "platform": 1
+  },
+  {
+    "id": "20",
+    "name": "Steve Indigo",
+    "email": "steve.indigo@example.com",
+    "subscriptionStatus": "active",
+    "subscriptionToken": "wxy987",
+    "platform": 2
+  }
+]
